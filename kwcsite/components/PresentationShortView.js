@@ -3,7 +3,7 @@ import React from "react";
 function PresentationShortView({ title, date, maker, id, slidesURL }) {
   return (
     <div>
-      <li key={id}>
+      <li>
         <h2>
           {title} by {maker}
         </h2>
