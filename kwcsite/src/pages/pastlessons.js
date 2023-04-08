@@ -22,7 +22,11 @@ function lessons() {
               {lesson.title} by {lesson.maker}
             </h2>
             <p>{lesson.date}</p>
-            <iframe src={lesson.slidesUrl} width="640" height="480"></iframe>
+            <iframe
+              src={`${lesson.slidesUrl}&rm=minimal&start=false`}
+              width="640"
+              height="480"
+            ></iframe>
           </li>
         ))}
       </ul>
