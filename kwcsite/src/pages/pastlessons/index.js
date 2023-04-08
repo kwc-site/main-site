@@ -1,6 +1,6 @@
 import React from "react";
 import useSWR from "swr";
-
+import PresentationShortView from "../../../components/PresentationShortView";
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 function lessons() {
@@ -17,17 +17,7 @@ function lessons() {
       <h1>Past Lessons</h1>
       <ul>
         {data.map((lesson) => (
-          <li key={lesson.id}>
-            <h2>
-              {lesson.title} by {lesson.maker}
-            </h2>
-            <p>{lesson.date}</p>
-            <iframe
-              src={`${lesson.slidesUrl}&rm=minimal&start=false`}
-              width="640"
-              height="480"
-            ></iframe>
-          </li>
+          <PresentationShortView title = {lesson.title} date= {lesson.date} creator = {lesson.creator} id = {lesson.id} slidesURL = {lesson.slidesUrl} ></PresentationShortView>
         ))}
       </ul>
     </div>

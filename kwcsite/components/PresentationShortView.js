@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
 
-function PresentationShortView({title, date, creator}) {
+function PresentationShortView({ title, date, maker, id, slidesURL }) {
   return (
-    <div>PresentationShortView</div>
-  )
+    <div>
+      <li key={id}>
+        <h2>
+          {title} by {maker}
+        </h2>
+        <p>{date}</p>
+        <iframe
+          src={`${slidesURL}&start=2&rm=minimal`}
+          width="340"
+          height="280"
+        ></iframe>
+      </li>
+    </div>
+  );
 }
 
-export default PresentationShortView
+export default PresentationShortView;
