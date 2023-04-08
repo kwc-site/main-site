@@ -1,12 +1,6 @@
 import pastLessonsData from "../../../public/data/pastLessonsData";
 
-export async function getStaticPaths() {
-  const paths = pastLessonsData.map((lesson) => ({
-    params: { lessonId: lesson.id.toString() },
-  }));
-
-  return { paths, fallback: false };
-}
+c
 
 export async function getStaticProps({ params }) {
   const lessonId = parseInt(params.lessonId);
