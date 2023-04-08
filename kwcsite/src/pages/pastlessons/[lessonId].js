@@ -1,8 +1,32 @@
-import React from "react";
+import pastLessonsData from "../../../public/data/pastLessonsData";
 
-function PresentationDetail({title, date, maker, id, slidesURL }) {
-  return <div>Presentation </div>;
+export async function getStaticPaths() {
+  const paths = pastLessonsData.map((lesson) => ({
+    params: { lessonId: lesson.id.toString() },
+  }));
+
+  return { paths, fallback: false };
 }
 
-export default PresentationDetail;  
-    
+export async function getStaticProps({ params }) {
+  const lessonId = parseInt(params.lessonId);
+  const lesson = pastLessonsData.find((lesson) => lesson.id === lessonId);
+
+  return {
+    props: {
+      lesson,
+    },
+  };
+}
+
+export default function Lesson({ lesson }) {
+  return (
+    <div>
+      <h1>
+        {lesson.title} by {lesson.maker}
+      </h1>
+      <p>Date: {lesson.date}</p>
+      <iframe src={`${lesson.slidesUrl}`} width="680" height="580"></iframe>
+    </div>
+  );
+}
