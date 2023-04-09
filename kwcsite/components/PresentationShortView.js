@@ -1,11 +1,11 @@
 import React from "react";
 
-function PresentationShortView({ title, date, maker, id, slidesURL }) {
+function PresentationShortView({ title, date, creator, id, slidesURL }) {
   return (
     <div>
-      <li>
+      <li className="text-white text-2xl">
         <h2>
-          {title} by {maker}
+          {title} by {creator}
         </h2>
         <p>{date}</p>
         <iframe

@@ -5,15 +5,15 @@ import Image from "next/image";
 
 function Footer() {
   return (
-    <nav className="bg-blue-950">
-      <ul className="flex justify-center">
-        <li className="mr-12 ml-12 mt-5 text-lg">
-          <Link href="/" className="text-white">
-            KWC
-          </Link>
-        </li>
-      </ul>
-    </nav>
+    <footer className="bg-blue-950 mt-auto bottom-0 left-0 h-20 w-full text-center">
+      <nav className="mx-auto">
+        <ul className="flex justify-center mt-5 text-lg">
+          <li className="mr-12 ml-12 text-white">
+            <Link href="/">KWC</Link>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   );
 }
 

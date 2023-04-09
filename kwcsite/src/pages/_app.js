@@ -5,8 +5,13 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Navbar />
-      <Component {...pageProps} />
-      {/* <Footer /> */}
+      <div className="min-h-screen flex flex-col">
+        {/* <div className="flex grow"> */}
+        <div className="flex grow">
+          <Component {...pageProps} />
+        </div>
+        <Footer />
+      </div>
     </>
   );
 }

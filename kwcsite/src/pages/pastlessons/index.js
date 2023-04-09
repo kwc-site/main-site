@@ -10,8 +10,6 @@ export async function getStaticProps() {
   };
 }
 
-
-
 export default function PastLessons({ pastLessons }) {
   return (
     <div>
@@ -27,7 +25,9 @@ export default function PastLessons({ pastLessons }) {
               slidesURL={lesson.slidesUrl}
             />
             <Link href={`/pastlessons/${lesson.id}`}>
-              <button>View Lesson Details</button>
+              <button className=" text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
+                View Lesson Details
+              </button>
             </Link>
           </div>
         ))}
