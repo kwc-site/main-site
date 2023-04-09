@@ -11,6 +11,7 @@ export async function getStaticProps() {
 }
 
 
+
 export default function PastLessons({ pastLessons }) {
   return (
     <div>
