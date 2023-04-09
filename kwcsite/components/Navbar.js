@@ -8,34 +8,31 @@ function Navbar() {
 
   return (
     <nav className="bg-blue-950">
-      <ul className="flex">
+      <ul className="flex justify-center">
         <Link href="/">
           <Image src="/kwclogo.png" width="64" height="64"></Image>
         </Link>
-        <li className="mr-12 ml-12">
+        <li className="mr-12 ml-12 mt-5 text-lg">
           <Link href="/" className="text-white">
             KWC
           </Link>
         </li>
-        <li className="mr-12">
+        <li className="mr-12 mt-5 text-lg">
           <Link href="/leaders" className="text-white">
             Leaders
           </Link>
         </li>
-        <li className="mr-12">
-          <Link
-            href="/pastlessons"
-            className="text-white"
-          >
+        <li className="mr-12 mt-5 text-lg">
+          <Link href="/pastlessons" className="text-white">
             Lessons
           </Link>
         </li>
-        <li className="mr-12">
+        <li className="mr-12 mt-5 text-lg">
           <Link href="/about" className="text-white">
             About
           </Link>
         </li>
-        <li className="mr-12">
+        <li className="mr-12 mt-5 text-lg">
           <Link href="/contact" className="text-white">
             Contact
           </Link>

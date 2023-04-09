@@ -14,7 +14,14 @@ export default function Home() {
       </Head>
       <main>
         <div>
-          <h1 className="text-3xl text-white">NJIT Kids Who Code</h1>
+          <div className="mt-10 transition-all">
+            <h1 className="text-9xl text-white text-right mr-12 pr-28 mt-10">
+              NJIT
+            </h1>
+            <h1 className="text-7xl text-white text-right mr-4">
+              Kids Who Code
+            </h1>
+          </div>
         </div>
       </main>
     </>
