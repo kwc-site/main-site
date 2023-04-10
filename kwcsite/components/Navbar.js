@@ -40,7 +40,7 @@ function Navbar() {
       </ul>
       {/* <Link href="/">KWC</Link> */}
 
-      {/* <Link href="/calender">Calender</Link> */}
+      <Link href="/calendar">Calendar</Link>
     </nav>
   );
 }
