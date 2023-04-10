@@ -18,6 +18,11 @@ function Navbar() {
           </Link>
         </li>
         <li className="mr-12 mt-5 text-lg">
+          <Link href="/calender" className="text-white">
+            Calender
+          </Link>
+        </li>
+        <li className="mr-12 mt-5 text-lg">
           <Link href="/leaders" className="text-white">
             Leaders
           </Link>
@@ -38,9 +43,6 @@ function Navbar() {
           </Link>
         </li>
       </ul>
-      {/* <Link href="/">KWC</Link> */}
-
-      {/* <Link href="/calender">Calender</Link> */}
     </nav>
   );
 }
