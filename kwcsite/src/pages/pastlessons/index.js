@@ -12,26 +12,24 @@ export async function getStaticProps() {
 
 export default function PastLessons({ pastLessons }) {
   return (
-    <div>
-      <h1>Past Lessons</h1>
-      <ul>
-        {pastLessons.map((lesson) => (
-          <div key={lesson.id}>
-            <PresentationShortView
-              title={lesson.title}
-              date={lesson.date}
-              creator={lesson.maker}
-              id={lesson.id}
-              slidesURL={lesson.slidesUrl}
-            />
-            <Link href={`/pastlessons/${lesson.id}`}>
-              <button className=" text-white transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none">
-                View Lesson Details
-              </button>
-            </Link>
-          </div>
-        ))}
-      </ul>
+    <div className="w-full text-white min-h-screen">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-5xl font-bold mb-8">Past Lessons</h1>
+        <hr className="bg-white my-8" />
+        <ul>
+          {pastLessons.map((lesson) => (
+            <div key={lesson.id} className="my-8">
+              <PresentationShortView
+                title={lesson.title}
+                date={lesson.date}
+                creator={lesson.maker}
+                id={lesson.id}
+                slidesURL={lesson.slidesUrl}
+              />
+            </div>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
