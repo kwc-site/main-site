@@ -18,8 +18,8 @@ function Navbar() {
           </Link>
         </li>
         <li className="mr-12 mt-5 text-lg">
-          <Link href="/calender" className="text-white">
-            Calender
+          <Link href="/calendar" className="text-white">
+            Calendar
           </Link>
         </li>
         <li className="mr-12 mt-5 text-lg">
