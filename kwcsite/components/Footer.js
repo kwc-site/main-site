@@ -2,6 +2,9 @@ import React from "react";
 import Link from "next/link";
 import { Router, useRouter } from "next/router";
 import Image from "next/image";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faDiscord } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
   return (
@@ -13,28 +16,13 @@ function Footer() {
               href="https://instagram.com/njitkidswhocode?igshid=YmMyMTA2M2Y="
               className="mr-10"
             >
-              <Image
-                src="/clubphotos/instagram.png"
-                width="50"
-                height="50"
-                alt="Instagram logo"
-              />
+              <FontAwesomeIcon size="2x" icon={faInstagram}></FontAwesomeIcon>
             </a>
             <a href="https://discord.gg/jKDhSJBWEe" className="mt-1 mr-10">
-              <Image
-                src="/clubphotos/discordlogo.png"
-                width="45"
-                height="45"
-                alt="Discord logo"
-              />
+              <FontAwesomeIcon size="2x" icon={faDiscord}></FontAwesomeIcon>
             </a>
             <a href="mailto: njitkwc@gmail.com" className="mt-1">
-              <Image
-                src="/clubphotos/emaillogo.png"
-                height="80"
-                width="63"
-                alt="Discord logo"
-              />
+              <FontAwesomeIcon size="2x" icon={faEnvelope}></FontAwesomeIcon>
             </a>
           </li>
         </ul>
