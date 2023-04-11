@@ -17,7 +17,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
+
       <main className="w-full flex flex-row text-white mt-5">
         <div className="w-1/2 p-10">
           <div className="border-2 border-gray-700 rounded-lg p-6 text-6xl">
@@ -28,7 +28,7 @@ export default function Home() {
                 loop: false,
                 deleteSpeed: 20,
                 delay: 50,
-                pauseFor: 250,
+                pauseFor: 200,
               }}
               onInit={(typewriter) => {
                 typewriter.callFunction(handleTypewriterComplete).start();
@@ -49,6 +49,7 @@ export default function Home() {
           </p>
         </div>
       </main>
+      {/* Credit to Fireship for teaching me */}
       <style jsx>{`
         p {
           font-size: 1.5rem;
