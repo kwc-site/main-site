@@ -24,7 +24,7 @@ function leaders() {
           <h2 className="text-xl mt-2">Eric Yi</h2>
         </div>
         <div className="flex flex-col items-center justify-center">
-          <h1 className="text-2xl font-bold mb-3">Treasurer</h1>
+          <h1 className="text-2xl font-bold mb-5">Treasurer</h1>
           <Image src="/eboard/treasurer.png" width="150" height="150"></Image>
           <h2 className="text-xl mt-2">Dev Patel</h2>
         </div>

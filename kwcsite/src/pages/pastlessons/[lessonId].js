@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 }
 export default function Lesson({ lesson }) {
   return (
-    <div className=" flex items-center justify-center h-screen w-full">
+    <div className=" flex items-center justify-center h-screen w-full mt-10 mb-10">
       <div className="mx-auto">
         <h1 className="text-white text-3xl mb-3 font-bold">
           {lesson.title} by {lesson.maker}

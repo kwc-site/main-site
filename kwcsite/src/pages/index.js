@@ -20,7 +20,7 @@ export default function Home() {
 
       <main className="w-full flex flex-row text-white mt-5">
         <div className="w-1/2 p-10">
-          <div className="border-2 border-gray-700 rounded-lg p-6 text-6xl">
+          <div className="border-2 border-gray-700 rounded-lg p-6 text-5xl">
             <Typewriter
               options={{
                 strings: "NJIT Kids Who Code",
@@ -38,14 +38,14 @@ export default function Home() {
           </div>
         </div>
         <div
-          className={`flex-1 p-10 text-xl text-right mt-3 ${
+          className={`flex-1 p-10 text-xl text-right mt-1  ${
             showText ? "opacity-100 animate-fade-in" : "opacity-0"
           }`}
         >
           <p>
             A professional club at New Jersey Institute of Technology dedicated
             to teaching programming to young children through a unique
-            curriculum containing Scratch.
+            curriculum.
           </p>
         </div>
       </main>
