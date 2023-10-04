@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>KidsWhoCode</title>
+        <title>Kids Who Code</title>
         <meta name="description" content="Kids Who Code Club Site" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
