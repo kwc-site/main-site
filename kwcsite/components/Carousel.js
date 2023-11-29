@@ -22,7 +22,7 @@ export default function Carousel({ images }) {
         onClick={handlePrevSlide}
         className="absolute left-0 m-auto text-5xl inset-y-1/2 cursor-pointer text-gray-400 z-20"
       />
-      <div className="w-full h-[50vh] flex overflow-hidden relative m-auto">
+      <div className="w-full h-[100vh] flex overflow-hidden relative m-auto">
         <Swipe
           onSwipeLeft={handleNextSlide}
           onSwipeRight={handlePrevSlide}
@@ -35,7 +35,11 @@ export default function Carousel({ images }) {
                   key={image.id}
                   src={image}
                   fill={true}
-                  style={{ objectFit: "contain" }}
+                  style={{
+                    objectFit: "contain",
+                    width: "100%",
+                    height: "100%",
+                  }}
                   className="animate-fadeIn"
                 />
               );
