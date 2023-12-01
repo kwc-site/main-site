@@ -1,12 +1,25 @@
 import PresentationShortView from "../../../components/PresentationShortView";
-import pastLessonsData from "../../../public/data/pastLessonsData";
-import Link from "next/link";
+import { getDocs, collection } from "firebase/firestore";
+import { db } from "../../../config/firebase";
 
 export async function getStaticProps() {
+  const lessonsCollection = collection(db, "lessons");
+
+  const querySnapshot = await getDocs(lessonsCollection);
+  console.log(
+    "Firestore Query Result:",
+    querySnapshot.docs.map((doc) => doc)
+  );
+  const pastLessons = querySnapshot.docs.map((doc) => ({
+    id: doc.id,
+    data: doc.data(),
+  }));
+
   return {
     props: {
-      pastLessons: pastLessonsData,
+      pastLessons,
     },
+    revalidate: 60 * 60 * 24,
   };
 }
 
@@ -18,15 +31,13 @@ export default function PastLessons({ pastLessons }) {
         <hr className="bg-white my-8" />
         <ul>
           {pastLessons.map((lesson) => (
-            <div key={lesson.id} className="my-8">
-              <PresentationShortView
-                title={lesson.title}
-                date={lesson.date}
-                creator={lesson.maker}
-                id={lesson.id}
-                slidesURL={lesson.slidesUrl}
-              />
-            </div>
+            <PresentationShortView
+              title={lesson.data.title}
+              date={lesson.data.date}
+              creator={lesson.data.maker}
+              id={lesson.id}
+              slidesURL={lesson.data.slidesUrl}
+            />
           ))}
         </ul>
       </div>
