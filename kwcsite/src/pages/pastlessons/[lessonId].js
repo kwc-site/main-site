@@ -1,3 +1,4 @@
+// [lessonId].js
 import { collection, getDocs, getDoc, doc } from "firebase/firestore";
 import { db } from "../../../config/firebase";
 
@@ -18,7 +19,7 @@ export async function getStaticProps({ params }) {
         props: {
           lesson,
         },
-        revalidate: 60 * 60 * 24, 
+        revalidate: 60 * 60 * 24,
       };
     } else {
       return {
@@ -42,24 +43,26 @@ export async function getStaticPaths() {
     params: { lessonId },
   }));
 
-  return { paths, fallback: true }; // Use fallback: true for ISR
+  return { paths, fallback: false }; // Use fallback: false for a full static generation
 }
 
 export default function Lesson({ lesson }) {
   if (!lesson) {
-    return <div>Loading...</div>; // Handle loading state
+    return <div>Lesson not found</div>;
   }
 
   return (
     <div className="flex items-center justify-center h-screen w-full mt-10 mb-10">
       <div className="mx-auto">
         <h1 className="text-white text-3xl mb-3 font-bold">
-          {lesson.data.LessonDate} by {lesson.data.Presenter}
+          {lesson.data.title} by {lesson.data.creator}
         </h1>
-        <p className="text-white text-2xl mb-3">
-          Date: {lesson.data.LessonName}
-        </p>
-        <iframe src={`${lesson.data.URL}`} width="680" height="580"></iframe>
+        <p className="text-white text-2xl mb-3">Date: {lesson.data.date}</p>
+        <iframe
+          src={`${lesson.data.slidesUrl}`}
+          width="680"
+          height="580"
+        ></iframe>
       </div>
     </div>
   );
