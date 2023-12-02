@@ -50,7 +50,7 @@ function about() {
           <hr className='bg-white my-8'></hr>
 
           <h1 className='text-4xl mb-7'>
-          If you're interested in joining Kids Who Code, we welcome all NJIT students, whether you're an experienced programmer or a beginner, and invite you to join us in making a difference in the lives of children in our community. 
+          If you&apos;re interested in joining Kids Who Code, we welcome all NJIT students, whether you&apos;re an experienced programmer or a beginner, and invite you to join us in making a difference in the lives of children in our community. 
         </h1>
         <h1 className="text-3xl mb-6"> Click the <u><a href='https://discord.com/invite/jKDhSJBWEe'>Discord</a></u> Icon or <u><a href='https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiBiNjBjPH-AhWaF1kFHUy-BwwQFnoECBgQAQ&url=https%3A%2F%2Fnjit.campuslabs.com%2Fengage%2Forganization%2Fkidswhocode&usg=AOvVaw2VNNNK7Nsx1xwPr3l1pm6f'>Highlander Hub</a></u> to learn more!</h1>
 
