@@ -32,6 +32,7 @@ export default function PastLessons({ pastLessons }) {
         <ul>
           {pastLessons.map((lesson) => (
             <PresentationShortView
+              key={lesson.id}
               title={lesson.data.title}
               date={lesson.data.date}
               creator={lesson.data.maker}
