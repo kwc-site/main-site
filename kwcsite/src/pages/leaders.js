@@ -4,7 +4,7 @@ import Image from "next/image";
 function leaders() {
   return (
     <div className="flex flex-col items-center text-white w-full">
-      <h1 className="text-4xl font-bold mb-6 mt-6">E-Board Spring 2023</h1>
+      <h1 className="text-4xl font-bold mb-6 mt-6">E-Board Fall 2023</h1>
       <div className="justify-center">
         <div className="flex flex-col items-center">
           <h1 className="text-2xl font-bold mb-3">President</h1>
